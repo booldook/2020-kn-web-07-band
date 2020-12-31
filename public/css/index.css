@@ -1,39 +1,52 @@
 /*********** initialize ***********/
 body {height: 5000px;}
 a:link, a:visited, a:active, a:hover {text-decoration: none; font: inherit; color: inherit;}
+h1, h2, h3, h4, h5, h6 {font: inherit;}
 
 
 /*********** common ***********/
-
+.wrapper {max-width: 768px; margin: auto;}
+section.page {padding: 5em 0;}
+.title-main {font-size: 1.875em; text-align: center; letter-spacing: 0.25em; margin-bottom: 0.75em;}
+.title-sub {text-align: center; font-style: italic; color: #999; margin-bottom: 2em;}
+.content {line-height: 1.5; margin-bottom: 5em;}
+.band-wrap {display: flex; flex-wrap: wrap;}
+.band-wrap .band {flex: 33.3333% 0 0; text-align: center; padding: 0 5%;}
+.band-wrap .band .name {margin-bottom: 1em;}
+.band-wrap .band .img-wrap {border-radius: 0.5em; overflow: hidden;}
 
 
 /*********** header-wrapper ***********/
 .header-wrapper {background-color: #111; position: fixed; left: 0; top: 0; width: 100%; box-shadow: 0 0 0.5em rgba(0,0,0,0.7); z-index: 99; color: #f9f9f9;display: flex; justify-content: space-between;}
+.header-wrapper a {display: block;}
 .header-wrapper .navi-wrapper {display: flex;}
-.header-wrapper .navi-wrapper .navi {padding: 1em 1.5em;}
+.header-wrapper .navi-wrapper .navi a {padding: 1em 1.5em;}
 .header-wrapper .navi-wrapper .navi:hover {background-color: #ccc; color: #111;}
 .header-wrapper .navi-wrapper .navi.more {position: relative;}
 .header-wrapper .navi-wrapper .navi.more:hover .more-wrap {display: block;}
 .header-wrapper .navi-wrapper .more-wrap {position: absolute; top: 3em; left: 0; background-color: #f1f1f1; color: #111; display: none;}
-.header-wrapper .navi-wrapper .more-wrap > li {padding: 0.75em; padding-right: 4em;}
+.header-wrapper .navi-wrapper .more-wrap a {padding: 0.75em; padding-right: 4em;}
 .header-wrapper .navi-wrapper .more-wrap > li:hover {background-color: #bbb;}
-.header-wrapper .search-wrapper {}
+.header-wrapper .search-wrapper {cursor: pointer;}
 .header-wrapper .search-wrapper .search-wrap {padding: 1em;}
 .header-wrapper .search-wrapper .search-wrap:hover {background-color: #f44336;}
 .header-wrapper .search-wrapper .bar-wrap {padding: 1em; display: none;}
 .header-wrapper .search-wrapper .bar-wrap:hover {background-color: #bbb; color: #111;}
 .header-wrapper .mo-navi-wrapper {position: absolute; top: 3em; left: 0; width: 100%; background-color: inherit; display: none;}
 .header-wrapper .mo-navi-wrapper.active {display: none;}
-.header-wrapper .mo-navi-wrapper .mo-navi {padding: 1em 1.5em;}
+.header-wrapper .mo-navi-wrapper .mo-navi a {padding: 1em 1.5em;}
 .header-wrapper .mo-navi-wrapper .mo-navi:hover {color: #f9f9f9; background-color: #bbb;}
 
 
 /*********** main-wrapper ***********/
-
+.main-wrapper {position: relative; margin-top: 3em;}
+.main-wrapper > .banner {position: absolute; width: 100%;}
+.main-wrapper > .banner > .title-wrap {position: absolute; bottom: 2em; left: 50%; transform: translateX(-50%); text-align: center; color: #f9f9f9; font-weight: bold;}
+.main-wrapper > .banner > .title-wrap > .title {font-size: 1.5em; margin-bottom: 1em;}
 
 
 /*********** band-wrapper ***********/
-
+.band-wrapper .content {text-align: justify;}
 
 
 /*********** tour-wrapper ***********/
@@ -58,10 +71,14 @@ a:link, a:visited, a:active, a:hover {text-decoration: none; font: inherit; colo
 }
 
 @media screen and (max-width: 767px) {
+	.wrapper {width: 96%; margin: 0 2%;}
+	
 	.header-wrapper .search-wrapper .search-wrap {display: none;}
 	.header-wrapper .search-wrapper .bar-wrap {display: block;}
 	.header-wrapper .navi-wrapper .navi:not(:first-child) {display: none;}
 	.header-wrapper .mo-navi-wrapper.active {display: block;}
+
+	.band-wrap .band {flex: 100% 0 0; padding: 0 20% 20% 20%;}
 }
 
 @media screen and (max-width: 575px) {
