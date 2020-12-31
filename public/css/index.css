@@ -1,8 +1,11 @@
 /*********** initialize ***********/
-body {height: 5000px;}
+body {height: 10000px;}
 a:link, a:visited, a:active, a:hover {text-decoration: none; font: inherit; color: inherit;}
 h1, h2, h3, h4, h5, h6 {font: inherit;}
-
+button {border: none; border-radius: 0;}
+button:focus {outline: none;}
+input {border-radius: 0;}
+input:focus {outline: none;}
 
 /*********** common ***********/
 .wrapper {max-width: 768px; margin: auto;}
@@ -71,7 +74,17 @@ section.page {padding: 5em 0;}
 
 
 /*********** contact-wrapper ***********/
-
+.contact-wrapper .contact-wrap {display: flex; flex-wrap: wrap}
+.contact-wrapper .contact-wrap > * {flex: 50% 0 0;}
+.contact-wrapper .tel-wrap > div {padding: 0.5em 0; font-size: 1.125em;}
+.contact-wrapper .tel-wrap i.fa {width: 2em;}
+.contact-wrapper .email-wrap {display: flex; flex-wrap: wrap; justify-content: space-between;}
+.contact-wrapper .email-wrap input {border: 1px solid #bbb; padding: 0.5em;}
+.contact-wrapper .email-wrap input[name='name'],
+.contact-wrapper .email-wrap input[name='email'] {flex: 48% 0 0; margin-bottom: 0.5em; width: 48%;}
+.contact-wrapper .email-wrap input[name='msg'] {flex: 100% 0 0; margin-bottom: 0.5em;}
+.contact-wrapper .email-wrap .bt-send {margin-left: auto; padding: 0.75em 1em; background-color: #111; color: #f9f9f9;}
+.contact-wrapper .email-wrap .bt-send:hover {background-color: #ccc; color: #111;}
 
 
 /*********** footer-wrapper ***********/
@@ -98,6 +111,10 @@ section.page {padding: 5em 0;}
 	.band-wrap .band {flex: 100% 0 0; padding: 0 20% 20% 20%;}
 
 	.tour-wrapper .city-wrap .city {flex: 100% 0 0; margin-bottom: 10px;}
+
+	.contact-wrapper .contact-wrap > * {flex: 100% 0 0;}
+	.contact-wrapper .email-wrap input[name='name'],
+	.contact-wrapper .email-wrap input[name='email'] {flex: 100% 0 0; width: 100%;}
 }
 
 @media screen and (max-width: 575px) {
