@@ -1,5 +1,6 @@
 /*********** initialize ***********/
-
+body {height: 5000px;}
+a:link, a:visited, a:active, a:hover {text-decoration: none; font: inherit; color: inherit;}
 
 
 /*********** common ***********/
@@ -7,7 +8,17 @@
 
 
 /*********** header-wrapper ***********/
-
+.header-wrapper {background-color: #111; position: fixed; left: 0; top: 0; width: 100%; box-shadow: 0 0 0.5em rgba(0,0,0,0.7); z-index: 99; color: #f9f9f9;display: flex; justify-content: space-between;}
+.header-wrapper .navi-wrapper {display: flex;}
+.header-wrapper .navi-wrapper .navi {padding: 1em 1.5em;}
+.header-wrapper .navi-wrapper .navi:hover {background-color: #ccc; color: #111;}
+.header-wrapper .navi-wrapper .navi.more {position: relative;}
+.header-wrapper .navi-wrapper .navi.more:hover .more-wrap {display: block;}
+.header-wrapper .navi-wrapper .more-wrap {position: absolute; top: 3em; left: 0; background-color: #f1f1f1; color: #111; display: none;}
+.header-wrapper .navi-wrapper .more-wrap > li {padding: 0.75em; padding-right: 4em;}
+.header-wrapper .navi-wrapper .more-wrap > li:hover {background-color: #bbb;}
+.header-wrapper .search-wrapper {}
+.header-wrapper .mo-navi-wrapper {position: absolute; display: none;}
 
 
 /*********** main-wrapper ***********/
