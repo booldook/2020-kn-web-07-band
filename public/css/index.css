@@ -85,6 +85,7 @@ section.page {padding: 5em 0;}
 .contact-wrapper .email-wrap input[name='msg'] {flex: 100% 0 0; margin-bottom: 0.5em;}
 .contact-wrapper .email-wrap .bt-send {margin-left: auto; padding: 0.75em 1em; background-color: #111; color: #f9f9f9;}
 .contact-wrapper .email-wrap .bt-send:hover {background-color: #ccc; color: #111;}
+.contact-wrapper #map {width: 100%; height: 50vh; margin-top: 4em;}
 
 
 /*********** footer-wrapper ***********/
