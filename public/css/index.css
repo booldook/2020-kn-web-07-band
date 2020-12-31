@@ -1,5 +1,4 @@
 /*********** initialize ***********/
-body {height: 10000px;}
 a:link, a:visited, a:active, a:hover {text-decoration: none; font: inherit; color: inherit;}
 h1, h2, h3, h4, h5, h6 {font: inherit;}
 button {border: none; border-radius: 0;}
@@ -9,7 +8,7 @@ input:focus {outline: none;}
 
 /*********** common ***********/
 .wrapper {max-width: 768px; margin: auto;}
-section.page {padding: 5em 0;}
+.page {padding: 5em 0;}
 .title-main {font-size: 1.875em; text-align: center; letter-spacing: 0.25em; margin-bottom: 0.75em;}
 .title-sub {text-align: center; font-style: italic; color: #999; margin-bottom: 2em;}
 
@@ -89,7 +88,8 @@ section.page {padding: 5em 0;}
 
 
 /*********** footer-wrapper ***********/
-
+.footer-wrapper {text-align: center; color: #555;}
+.footer-wrapper .sns-wrap {font-size: 1.25em; margin-bottom: 1em;}
 
 
 /*********** Responsive ***********/

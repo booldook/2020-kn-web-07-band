@@ -7,6 +7,8 @@ var bannerIdx = 0;
 $(".header-wrapper .bar-wrap").click(onBarWrap);
 bannerInterval = setInterval(onBannerInterval, 4000);
 
+$(window).resize(setCenter);
+
 
 
 /********* 이벤트콜백 **********/
@@ -40,5 +42,14 @@ var marker = new kakao.maps.Marker({
 		position: markerPosition
 });
 
+function setCenter() {            
+	// 이동할 위도 경도 위치를 생성합니다 
+	var moveLatLon = new kakao.maps.LatLng(37.498762, 127.026782);
+	
+	// 지도 중심을 이동 시킵니다
+	map.setCenter(moveLatLon);
+}
+
 // 마커가 지도 위에 표시되도록 설정합니다
 marker.setMap(map);
+map.setZoomable(false); 
