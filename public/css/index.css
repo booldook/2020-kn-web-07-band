@@ -9,11 +9,7 @@ h1, h2, h3, h4, h5, h6 {font: inherit;}
 section.page {padding: 5em 0;}
 .title-main {font-size: 1.875em; text-align: center; letter-spacing: 0.25em; margin-bottom: 0.75em;}
 .title-sub {text-align: center; font-style: italic; color: #999; margin-bottom: 2em;}
-.content {line-height: 1.5; margin-bottom: 5em;}
-.band-wrap {display: flex; flex-wrap: wrap;}
-.band-wrap .band {flex: 33.3333% 0 0; text-align: center; padding: 0 5%;}
-.band-wrap .band .name {margin-bottom: 1em;}
-.band-wrap .band .img-wrap {border-radius: 0.5em; overflow: hidden;}
+
 
 
 /*********** header-wrapper ***********/
@@ -46,11 +42,32 @@ section.page {padding: 5em 0;}
 
 
 /*********** band-wrapper ***********/
-.band-wrapper .content {text-align: justify;}
+.band-wrapper .content {text-align: justify; line-height: 1.5; margin-bottom: 5em;}
+.band-wrap {display: flex; flex-wrap: wrap;}
+.band-wrap .band {flex: 33.3333% 0 0; text-align: center; padding: 0 5%;}
+.band-wrap .band .name {margin-bottom: 1em;}
+.band-wrap .band .img-wrap {border-radius: 0.5em; overflow: hidden;}
 
 
 /*********** tour-wrapper ***********/
+.tour-wrapper {background-color: #111;}
+.tour-wrapper .title-main {color: #f9f9f9;}
+.tour-wrapper .date-wrap {background-color: #f1f1f1; border: 1px solid #ccc;}
+.tour-wrapper .date-wrap .date:not(:last-child) {border-bottom: 1px solid #ccc;}
+.tour-wrapper .date-wrap .date {padding: 0.75em 1em; display: flex; align-items: center; color: #555;}
+.tour-wrapper .date-wrap .date .tag {margin-left: 1em; color: #f9f9f9; background-color: #f44336; padding: 0.25em 0.5em;}
+.tour-wrapper .date-wrap .date .count {margin-left: auto; margin-right: 1em; background-color: #111; color: #f9f9f9; padding: 0.25em 0.5em; border-radius: 50%;}
 
+.tour-wrapper .city-wrap {display: flex; flex-wrap: wrap; justify-content: space-between; }
+.tour-wrapper .city-wrap .city {flex: 32% 0 0; background-color: #fff;}
+.tour-wrapper .city-wrap .city .img-wrap {background-color: #111;}
+.tour-wrapper .city-wrap .city .img-wrap:hover img {opacity: .7;}
+.tour-wrapper .city-wrap .city .content-wrap {padding: 1em;}
+.tour-wrapper .content-wrap .name {font-weight: bold; margin-bottom: 1.5em;}
+.tour-wrapper .content-wrap .date {color: #999; margin-bottom: 1.5em;}
+.tour-wrapper .content-wrap .content {line-height: 1.25; margin-bottom: 1.5em;}
+.tour-wrapper .content-wrap .bt-buy {display: inline-block; padding: 0.75em 1em; background-color: #111; color: #f9f9f9;}
+.tour-wrapper .content-wrap .bt-buy:hover {background-color: #bbb; color: #111;}
 
 
 /*********** contact-wrapper ***********/
@@ -79,6 +96,8 @@ section.page {padding: 5em 0;}
 	.header-wrapper .mo-navi-wrapper.active {display: block;}
 
 	.band-wrap .band {flex: 100% 0 0; padding: 0 20% 20% 20%;}
+
+	.tour-wrapper .city-wrap .city {flex: 100% 0 0; margin-bottom: 10px;}
 }
 
 @media screen and (max-width: 575px) {
