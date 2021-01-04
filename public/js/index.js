@@ -54,4 +54,4 @@ function setCenter() {
 marker.setMap(map);
 map.setZoomable(false); 
 
-new WOW().init();
+new WOW({ offset: 150 }).init();
